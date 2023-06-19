@@ -20,10 +20,8 @@ This command-line script allows you to manage WordPress sites using a LEMP stack
 1. Clone the repository or download the script file:
    ```bash
    git clone https://github.com/payal024/LEMP.git
-2. Navigate to the script directory:
-   cd LEMP
-3. Make the script executable:
-   chmod +x wordpress_script.sh
+2. Make the script executable:
+   chmod +x main.sh
 
 
 
@@ -31,12 +29,12 @@ This command-line script allows you to manage WordPress sites using a LEMP stack
 Usage
 Checking Dependencies
 To check if Docker and Docker Compose are installed on your system, run the following command:
-./wordpress_script.sh check-dependencies
+./main.sh check-dependencies
 If any of the dependencies are missing, the script will automatically install them.
 
 Creating a WordPress Site
 To create a new WordPress site, use the create subcommand followed by the desired site name:
-./wordpress_script.sh create example.com
+./main.sh create example.com
 
 This will set up a new WordPress site with the provided name.
 
@@ -45,16 +43,16 @@ The script will automatically update the /etc/hosts file to map the site name to
 
 Opening the Site in a Browser
 If the site is up and running, you can open it in a browser using the following command:
-./wordpress_script.sh open example.com
+./main.sh open example.com
 
 
 Enabling/Disabling the Site
 To start or stop the containers for a site, use the enable or disable subcommands:
-./wordpress_script.sh enable example.com
-./wordpress_script.sh disable example.com
+./main.sh enable example.com
+./main.sh disable example.com
 
 Deleting the Site
 To delete a WordPress site, use the delete subcommand:
-./wordpress_script.sh delete example.com
+./main.sh delete example.com
 
 This will remove the containers and local files associated with the site.
